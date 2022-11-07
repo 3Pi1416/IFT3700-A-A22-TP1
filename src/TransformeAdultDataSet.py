@@ -15,15 +15,16 @@ def transformeAdultDataSet():
     adult_transform_data = pd.DataFrame()
     adult_transform_data_true_false = pd.DataFrame()
 
-    for colunm in adult_data.columns:
-        if np.issubdtype(adult_data[colunm].dtype, np.number):
-            adult_transform_data[colunm] = adult_data[colunm].values
-            adult_transform_data[colunm] = adult_data[colunm] > adult_data[colunm].mean()
+
+    for column in adult_data.columns:
+        if np.issubdtype(adult_data[column].dtype, np.number):
+            adult_transform_data[column] = adult_data[column].values
+            adult_transform_data[column] = adult_data[column] > adult_data[column].mean()
         else:
-            if adult_data[colunm].dtype == str or adult_data[colunm].dtype == tuple:
-                for column_name in adult_data[colunm].unique():
-                    adult_transform_data[column_name] = adult_data[colunm] == column_name
-                    adult_transform_data_true_false[column_name] = adult_data[colunm] == column_name
+            if adult_data[column].dtype == str or adult_data[column].dtype == tuple:
+                for column_name in adult_data[column].unique():
+                    adult_transform_data[column_name] = adult_data[column] == column_name
+                    adult_transform_data_true_false[column_name] = adult_data[column] == column_name
             else:
                 raise "bad data"
 
