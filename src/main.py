@@ -1,5 +1,5 @@
 # from keras.datasets import mnist
-from src.KNeighbour import evaluate_k_neighbour
+from src.algos.KNeighbour import evaluate_k_neighbour
 from src.TransformeAdultDataSet import transformeAdultDataSet
 import pandas as pd
 
