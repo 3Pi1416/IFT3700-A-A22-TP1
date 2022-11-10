@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
-from src.compareFunction import compare_string, compare_number
+from src.adult.CompareFunctions import compare_string, compare_number
 
 
 def transformeAdultDataSet():
