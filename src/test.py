@@ -17,5 +17,6 @@ def get_cosine_dissimilarity_matrix(X, Y=None):
 theta = np.linspace(0, 2 * np.pi, 124)[:-1]
 circle = np.stack([np.cos(theta), np.sin(theta)], axis=1)
 circle_cosine_dissimilarity = get_cosine_dissimilarity_matrix(circle)
+test = -.5*circle_cosine_dissimilarity**2
 
 print("wow")
