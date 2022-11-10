@@ -5,30 +5,23 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
+from src.compareFunction import compare_string, compare_number
+
 
 def transformeAdultDataSet():
     # Transforme les données pour les prochaines étapes.
     # Les string et truple sont toujours transformer en boolean
     # Les nombre sont seulement transformer pour adult_transform_data_true_false selon la moyenne.
     adult_data: pd.DataFrame = readAdultData()
-
-    adult_transform_data = pd.DataFrame()
-    adult_transform_data_true_false = pd.DataFrame()
-
+    function_map_for_Columns: map(str, tuple) = {}
 
     for column in adult_data.columns:
         if np.issubdtype(adult_data[column].dtype, np.number):
-            adult_transform_data[column] = adult_data[column].values
-            adult_transform_data[column] = adult_data[column] > adult_data[column].mean()
+            function_map_for_Columns[column] = (compare_number, (adult_data[column].min(), adult_data[column].max()))
         else:
-            if adult_data[column].dtype == str or adult_data[column].dtype == tuple:
-                for column_name in adult_data[column].unique():
-                    adult_transform_data[column_name] = adult_data[column] == column_name
-                    adult_transform_data_true_false[column_name] = adult_data[column] == column_name
-            else:
-                raise "bad data"
+            function_map_for_Columns[column] = (compare_string, None)
 
-    return adult_transform_data, adult_transform_data_true_false
+    return adult_data, function_map_for_Columns
 
 
 # how to import adult https://towardsdatascience.com/a-beginners-guide-to-data-analysis-machine-learning-with-python-adult-salary-dataset-e5fc028b6f0a
