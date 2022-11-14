@@ -34,3 +34,17 @@ def analyse_Similarity(dissimilarities, similarities, data_point_y, dissimilarit
 
     calculate_error(data_set, data_test_sets, data_point_y, [">50K", "<=50K"])
     plot_result(data_test_sets, colors)
+
+
+def return_nothing(data_set, data_point_y):
+    return []
+
+
+def find_cut(data_set, data_point_y):
+
+
+    return
+
+dict_method = {"PCoA": find_cut, "neighbour": 3, "isomap": find_cut, "k_medoids": 3}
+def caculate_parameters(data_set, data_point_y):
+
