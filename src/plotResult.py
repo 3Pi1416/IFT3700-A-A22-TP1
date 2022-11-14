@@ -2,14 +2,13 @@ import numpy as np
 from matplotlib import pyplot
 from matplotlib.backends.backend_pdf import PdfPages
 
-data_type = {
-                "PCoA":, "neighbour":, "isomap":, "k_medoids":
-}
+data_type_dict = {"PCoA": 2, "neighbour": 3, "isomap": 2, "k_medoids": 3}
+
 
 def plot_result(data_sets: dict, colors):
     with (PdfPages('result.pdf')) as pp:
         for data_name, values in data_sets.items():
-            data_type = values[0]
+            data_type = data_type_dict[values[0]]
             data_set = values[1]
 
             fig = pyplot.figure()
