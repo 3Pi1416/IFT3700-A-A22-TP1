@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot
 from matplotlib.backends.backend_pdf import PdfPages
 
-data_type_dict = {"PCoA": 2, "neighbour": 3, "isomap": 2, "k_medoids": 3}
+data_type_dict = {"PCoA": 2, "neighbour": 3, "isomap": 2, "k_medoids": 3, "binary_partition": 3}
 
 
 def plot_result(data_sets: dict, colors):

@@ -24,7 +24,7 @@ def defined_group_values(values, real_values, value_name, args):
 
 
 function_error_dict = {"PCoA": split_compare_values, "neighbour": compare_values_is_in, "isomap": split_compare_values,
-                       "k_medoids": defined_group_values}
+                       "k_medoids": defined_group_values, "binary_partition": defined_group_values}
 
 
 def calculate_error(results: dict, real_values: pd.DataFrame, values_list: List, dict_of_args):
