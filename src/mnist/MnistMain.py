@@ -1,6 +1,6 @@
 from keras.datasets import mnist
 
-from src.mnist.EuclideanDistance import calculate_euclidean_distance
+from src.algos.EuclideanDistance import calculate_euclidean_distance
 from src.algos.Isomap import calculate_isomap
 from src.algos.KMedoids import calculate_k_medoids
 from src.algos.KNeighbour import evaluate_k_neighbour
