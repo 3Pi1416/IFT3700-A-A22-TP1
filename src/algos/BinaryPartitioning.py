@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.cluster import AgglomerativeClustering
 
 
-def calculate_binary_partition(number_clusters, dissimilarities):
+def calculate_binary_partition(number_clusters, dissimilarities, dissimilarities_test):
     agglomerative_clustering = AgglomerativeClustering(n_clusters=number_clusters, affinity='precomputed',
                                                        linkage='average')
     agglomerative_clustering.fit(dissimilarities)
