@@ -2,6 +2,9 @@
 .idea*/
 .vs*/
 
+#big_file
+save/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
