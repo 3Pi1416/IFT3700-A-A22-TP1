@@ -6,7 +6,7 @@ def calculate_binary_partition(number_clusters, dissimilarities, dissimilarities
     agglomerative_clustering = AgglomerativeClustering(n_clusters=number_clusters, affinity='precomputed',
                                                        linkage='average')
     agglomerative_clustering.fit(dissimilarities)
-    return agglomerative_clustering_predict(agglomerative_clustering, dissimilarities)
+    return agglomerative_clustering_predict(agglomerative_clustering, dissimilarities_test)
 
 
 def agglomerative_clustering_predict(agglomerative_clustering, dissimilarity_matrix):
