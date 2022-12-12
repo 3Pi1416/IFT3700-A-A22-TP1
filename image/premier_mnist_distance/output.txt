@@ -1,0 +1,210 @@
+neighbour_2 analyse :
+v-mesure:0.0050793513032306005
+Total errors: 3591 on 4000
+0: 196 on 212
+1: 935 on 1052
+2: 836 on 921
+3: 796 on 892
+4: 155 on 176
+5: 503 on 562
+6: 34 on 38
+7: 98 on 104
+8: 34 on 38
+9: 4 on 5
+neighbour_3 analyse :
+v-mesure:0.004218576791582801
+Total errors: 3551 on 4000
+0: 252 on 277
+1: 1212 on 1371
+2: 863 on 971
+3: 571 on 642
+4: 104 on 117
+5: 429 on 485
+6: 11 on 12
+7: 42 on 49
+8: 36 on 41
+9: 31 on 35
+neighbour_4 analyse :
+v-mesure:0.004866263851140315
+Total errors: 3570 on 4000
+0: 275 on 299
+1: 1252 on 1423
+2: 712 on 795
+3: 457 on 513
+4: 74 on 86
+5: 587 on 650
+6: 22 on 23
+7: 63 on 71
+8: 66 on 72
+9: 62 on 68
+neighbour_5 analyse :
+v-mesure:0.004999249895012747
+Total errors: 3557 on 4000
+0: 237 on 265
+1: 1143 on 1304
+2: 592 on 664
+3: 470 on 532
+4: 93 on 108
+5: 727 on 799
+6: 26 on 29
+7: 88 on 101
+8: 98 on 107
+9: 83 on 91
+neighbour_6 analyse :
+v-mesure:0.005767039331943166
+Total errors: 3567 on 4000
+0: 192 on 216
+1: 1010 on 1160
+2: 579 on 653
+3: 547 on 607
+4: 142 on 154
+5: 766 on 838
+6: 26 on 29
+7: 112 on 131
+8: 104 on 113
+9: 89 on 99
+neighbour_7 analyse :
+v-mesure:0.00653388767089817
+Total errors: 3581 on 4000
+0: 128 on 144
+1: 1037 on 1200
+2: 621 on 686
+3: 598 on 660
+4: 162 on 177
+5: 730 on 795
+6: 22 on 24
+7: 108 on 123
+8: 98 on 107
+9: 77 on 84
+k_medoids analyse :
+v-mesure:0.0009869420068918584
+Total errors: 3635 on 4000
+0: 0 on 0
+1: 0 on 0
+2: 0 on 0
+3: 0 on 0
+4: 739 on 812
+5: 2896 on 3188
+6: 0 on 0
+7: 0 on 0
+8: 0 on 0
+9: 0 on 0
+binary_partition analyse :
+v-mesure:0.0015810876189023162
+Total errors: 3625 on 4000
+0: 3618 on 3993
+1: 7 on 7
+2: 0 on 0
+3: 0 on 0
+4: 0 on 0
+5: 0 on 0
+6: 0 on 0
+7: 0 on 0
+8: 0 on 0
+9: 0 on 0
+PCoA_neighbour_2 analyse :
+v-mesure:0.00673201169887952
+Total errors: 2889 on 3200
+0: 530 on 578
+1: 566 on 639
+2: 448 on 498
+3: 337 on 375
+4: 385 on 421
+5: 208 on 228
+6: 144 on 158
+7: 195 on 221
+8: 59 on 62
+9: 17 on 20
+PCoA_neighbour_3 analyse :
+v-mesure:0.00673201169887952
+Total errors: 2889 on 3200
+0: 530 on 578
+1: 566 on 639
+2: 448 on 498
+3: 337 on 375
+4: 385 on 421
+5: 208 on 228
+6: 144 on 158
+7: 195 on 221
+8: 59 on 62
+9: 17 on 20
+PCoA_neighbour_4 analyse :
+v-mesure:0.00673201169887952
+Total errors: 2889 on 3200
+0: 530 on 578
+1: 566 on 639
+2: 448 on 498
+3: 337 on 375
+4: 385 on 421
+5: 208 on 228
+6: 144 on 158
+7: 195 on 221
+8: 59 on 62
+9: 17 on 20
+PCoA_neighbour_5 analyse :
+v-mesure:0.00673201169887952
+Total errors: 2889 on 3200
+0: 530 on 578
+1: 566 on 639
+2: 448 on 498
+3: 337 on 375
+4: 385 on 421
+5: 208 on 228
+6: 144 on 158
+7: 195 on 221
+8: 59 on 62
+9: 17 on 20
+isomap_neighbour_2 analyse :
+v-mesure:0.007192850862609389
+Total errors: 2890 on 3200
+0: 513 on 583
+1: 491 on 548
+2: 468 on 516
+3: 346 on 384
+4: 407 on 441
+5: 271 on 297
+6: 111 on 121
+7: 165 on 181
+8: 97 on 105
+9: 21 on 24
+isomap_neighbour_3 analyse :
+v-mesure:0.007192850862609389
+Total errors: 2890 on 3200
+0: 513 on 583
+1: 491 on 548
+2: 468 on 516
+3: 346 on 384
+4: 407 on 441
+5: 271 on 297
+6: 111 on 121
+7: 165 on 181
+8: 97 on 105
+9: 21 on 24
+isomap_neighbour_4 analyse :
+v-mesure:0.007192850862609389
+Total errors: 2890 on 3200
+0: 513 on 583
+1: 491 on 548
+2: 468 on 516
+3: 346 on 384
+4: 407 on 441
+5: 271 on 297
+6: 111 on 121
+7: 165 on 181
+8: 97 on 105
+9: 21 on 24
+isomap_neighbour_5 analyse :
+v-mesure:0.007192850862609389
+Total errors: 2890 on 3200
+0: 513 on 583
+1: 491 on 548
+2: 468 on 516
+3: 346 on 384
+4: 407 on 441
+5: 271 on 297
+6: 111 on 121
+7: 165 on 181
+8: 97 on 105
+9: 21 on 24
+
+
