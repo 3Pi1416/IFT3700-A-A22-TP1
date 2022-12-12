@@ -1,0 +1,72 @@
+neighbour_8 analyse :
+v-mesure:0.1518796405798654
+Total errors: 781 on 4000
+>50K: 203 on 614
+<=50K: 578 on 3386
+neighbour_9 analyse :
+v-mesure:0.17632471834982458
+Total errors: 754 on 4000
+>50K: 264 on 763
+<=50K: 490 on 3237
+neighbour_10 analyse :
+v-mesure:0.157858978905212
+Total errors: 770 on 4000
+>50K: 192 on 603
+<=50K: 578 on 3397
+neighbour_11 analyse :
+v-mesure:0.18501987296631578
+Total errors: 737 on 4000
+>50K: 248 on 748
+<=50K: 489 on 3252
+neighbour_12 analyse :
+v-mesure:0.17022541416002787
+Total errors: 750 on 4000
+>50K: 185 on 609
+<=50K: 565 on 3391
+neighbour_13 analyse :
+v-mesure:0.19218309856010782
+Total errors: 722 on 4000
+>50K: 226 on 719
+<=50K: 496 on 3281
+neighbour_14 analyse :
+v-mesure:0.17136247563839413
+Total errors: 749 on 4000
+>50K: 192 on 624
+<=50K: 557 on 3376
+neighbour_15 analyse :
+v-mesure:0.19135583223471977
+Total errors: 725 on 4000
+>50K: 236 on 736
+<=50K: 489 on 3264
+neighbour_16 analyse :
+v-mesure:0.17696077083227485
+Total errors: 740 on 4000
+>50K: 188 on 625
+<=50K: 552 on 3375
+neighbour_17 analyse :
+v-mesure:0.19241562602652165
+Total errors: 721 on 4000
+>50K: 222 on 712
+<=50K: 499 on 3288
+neighbour_18 analyse :
+v-mesure:0.1729654545872678
+Total errors: 746 on 4000
+>50K: 187 on 617
+<=50K: 559 on 3383
+neighbour_19 analyse :
+v-mesure:0.17993054800208688
+Total errors: 740 on 4000
+>50K: 222 on 693
+<=50K: 518 on 3307
+neighbour_25 analyse :
+v-mesure:0.19028248213299623
+Total errors: 720 on 4000
+>50K: 189 on 647
+<=50K: 531 on 3353
+neighbour_50 analyse :
+v-mesure:0.16704507211808525
+Total errors: 755 on 4000
+>50K: 186 on 606
+<=50K: 569 on 3394
+neighbour_100 analyse :
+v-mesure:0.17016090806898856

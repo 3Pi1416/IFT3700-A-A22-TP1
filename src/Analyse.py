@@ -17,23 +17,22 @@ def analyse_Similarity(dissimilarities, data_point_y, dissimilarities_test,
                        data_point_y_test, initial_medoids, colors,real_value_name):
     data_set: dict = {
         "PCoA": ("PCoA", calculate_PCoA(dissimilarities, dissimilarities_test)),
-        "neighbour_2": ("neighbour", evaluate_k_neighbour(2, data_point_y.to_numpy(), dissimilarities,
+        "neighbour_25": ("neighbour", evaluate_k_neighbour(25, data_point_y.to_numpy(), dissimilarities,
                                                           dissimilarities_test)),
-        "neighbour_3": ("neighbour", evaluate_k_neighbour(3, data_point_y.to_numpy(), dissimilarities,
+        "neighbour_50": ("neighbour", evaluate_k_neighbour(50, data_point_y.to_numpy(), dissimilarities,
                                                           dissimilarities_test)),
-        "neighbour_4": ("neighbour", evaluate_k_neighbour(4, data_point_y.to_numpy(), dissimilarities,
+        "neighbour_100": ("neighbour", evaluate_k_neighbour(100, data_point_y.to_numpy(), dissimilarities,
                                                           dissimilarities_test)),
-        "neighbour_5": ("neighbour", evaluate_k_neighbour(5, data_point_y.to_numpy(), dissimilarities,
+        "neighbour_17": ("neighbour", evaluate_k_neighbour(17, data_point_y.to_numpy(), dissimilarities,
                                                           dissimilarities_test)),
-        "neighbour_6": ("neighbour", evaluate_k_neighbour(6, data_point_y.to_numpy(), dissimilarities,
+        "neighbour_18": ("neighbour", evaluate_k_neighbour(18, data_point_y.to_numpy(), dissimilarities,
                                                           dissimilarities_test)),
-        "neighbour_7": ("neighbour", evaluate_k_neighbour(7, data_point_y.to_numpy(), dissimilarities,
+        "neighbour_19": ("neighbour", evaluate_k_neighbour(19, data_point_y.to_numpy(), dissimilarities,
                                                           dissimilarities_test)),
         "isomap_2": ("isomap", calculate_isomap(2, 1, dissimilarities, dissimilarities_test)),
         "k_medoids": ("k_medoids", calculate_k_medoids(dissimilarities, dissimilarities_test, initial_medoids)),
         "binary_partition": ("binary_partition", calculate_binary_partition(2, dissimilarities, dissimilarities_test))
     }
-
     dict_method = {"PCoA": None, "neighbour": [2], "isomap": None, "k_medoids": [real_value_name],
                    "binary_partition": [real_value_name]}
 
