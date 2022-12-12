@@ -1,5 +1,5 @@
 from typing import List
-
+from sklearn.metrics.cluster import v_measure_score
 import pandas as pd
 
 from src.algos.EuclideanDistance import calculate_euclidean_distance
@@ -20,22 +20,14 @@ def compare_values_is_in(values, real_values, values_list, args):
     return sum_error, number_of_values
 
 
-def split_value_with_k_neibourg(values, real_values, values_list, args):
-    best_number_neightbourg = args[0]
-    values = calculate_euclidean_distance(values)
-    values_modified = evaluate_k_neighbour(best_number_neightbourg, real_values, values)
-
-    return compare_values_is_in(values_modified, real_values, values_list, [])
-
-
 def defined_group_values(values, real_values, values_list, args):
     real_output = args[0]
     values = [real_output[i] for i in values]
     return compare_values_is_in(values, real_values, values_list, [])
 
 
-function_error_dict = {"PCoA": split_value_with_k_neibourg, "neighbour": compare_values_is_in,
-                       "isomap": split_value_with_k_neibourg, "k_medoids": defined_group_values,
+function_error_dict = {"PCoA": None, "neighbour": compare_values_is_in,
+                       "isomap": None, "k_medoids": defined_group_values,
                        "binary_partition": defined_group_values}
 
 
@@ -44,11 +36,19 @@ def calculate_error(results: dict, real_values: pd.DataFrame, values_list: List,
     for key, item in results.items():
         analyse_type = item[0]
         values = item[1]
-        sum_error, number_of_values = function_error_dict[analyse_type](values, real_values, values_list,
-                                                                        dict_of_args[analyse_type])
-        error_dict[key] = (sum_error, number_of_values)
+        function_to_do = function_error_dict[analyse_type]
+
+        if function_to_do is None:
+            pass
+        else:
+            sum_error, number_of_values = function_error_dict[analyse_type](values, real_values, values_list,
+                                                                            dict_of_args[analyse_type])
+            error_dict[key] = (sum_error, number_of_values)
+
+            v_mesure_result = v_measure_score(values, real_values)
+            print(f"{key} analyse :")
+            print(f"v-mesure:{v_mesure_result}")
+            for error_name, moreThan in sum_error.items():
+                print(f"{error_name}: {moreThan} on {number_of_values[error_name]}")
 
     return
-        # print(f"{key} analyse :")
-        # for error_name, item2 in sum_error:
-        #     print(f"{error_name}: {item2} on {number_of_values[error_name]}")

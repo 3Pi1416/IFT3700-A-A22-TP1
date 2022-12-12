@@ -37,15 +37,17 @@ def read_data_and_save(size_of_data_point):
         csv_writer.writerows(dissimilarities)
 
 
-def add_y_and_prepare_data(dissimilarities, test_size):
+def add_y_and_prepare_data(dissimilarities_clean, test_size):
     # add y to the matrix
     adult_transform_data, function_map = transformeAdultDataSet()
     data_point: pd.DataFrame = adult_transform_data.iloc[:size_of_data_point]
     data_point_y_clean: pd.DataFrame = data_point["label"]
 
-    dissimilarities, dissimilarities_test, data_point_y, data_point_y_test = train_test_split(dissimilarities,
+    # shuffle a false, pour avoir la matrice diagonal 0 lorsqu'on apprend les modèles.
+    dissimilarities, dissimilarities_test, data_point_y, data_point_y_test = train_test_split(dissimilarities_clean,
                                                                                               data_point_y_clean,
-                                                                                              test_size=test_size)
+                                                                                              test_size=test_size,
+                                                                                              shuffle=False)
     size = len(dissimilarities)
 
     dissimilarities_square = []
@@ -70,6 +72,7 @@ if __name__ == '__main__':
     cwd = Path(os.getcwd())
 
     dissimilarities_files = cwd.joinpath("save", 'dissimilarities_5000.csv')
+    # similarities_files = cwd.joinpath("save", 'similarities_5000.csv')
     size_of_data_point = 5000
     if not dissimilarities_files.exists():
         read_data_and_save(size_of_data_point)
@@ -87,6 +90,7 @@ if __name__ == '__main__':
 
     colors = ["indigo" if point == ">50K" else "chartreuse" for point in data_point_y_test]
     initial_medoids = [0, 1]
+    real_value_name = [">50K", "<=50K"]
 
-    analyse_Similarity(dissimilarities_square, data_point_y, dissimilarities_test_size_of_fit,
-                       data_point_y_test, initial_medoids, colors)
+    analyse_Similarity(dissimilarities_square, data_point_y, dissimilarities_test_size_of_fit, data_point_y_test,
+                       initial_medoids, colors, real_value_name)
