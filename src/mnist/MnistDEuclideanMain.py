@@ -42,12 +42,12 @@ if __name__ == '__main__':
     colors_dict = {0: "indigo", 1: "black", 2: "red", 3: "chocolate", 4: "gold", 5: "chartreuse", 6: "turquoise",
                    7: "royalblue", 8: "orange", 9: "silver"}
 
-    colors = [colors_dict[point] for point in data_point_y[:size_of_data_point]]
+    colors = [colors_dict[point] for point in data_point_y_test[:size_of_data_point]]
     initial_medoids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     real_value_name = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     # delete list in in other list the data (from mnist)
-    data_point_y = pd.DataFrame(data_point_y.tolist())
-    data_point_y_test = pd.DataFrame(data_point_y_test.tolist())
+    data_point_y = pd.DataFrame(data_point_y.tolist(),columns=[0])[0]
+    data_point_y_test = pd.DataFrame(data_point_y_test.tolist(),columns=[0])[0]
     analyse_Similarity(dissimilarities_square, data_point_y, dissimilarities_test_size_of_fit, data_point_y_test,
                        initial_medoids, colors, real_value_name)
