@@ -38,7 +38,7 @@ def read_data_and_save(size_of_data_point):
 
 
 def add_y_and_prepare_data(dissimilarities_clean, test_size):
-    # add y to the matrix
+    # find the data form before, to find y
     adult_transform_data, function_map = transformeAdultDataSet()
     data_point: pd.DataFrame = adult_transform_data.iloc[:size_of_data_point]
     data_point_y_clean: pd.DataFrame = data_point["label"]
