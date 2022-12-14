@@ -11,7 +11,7 @@ from src.algos.EuclideanDistance import calculate_euclidean_distance
 
 if __name__ == '__main__':
     (data_point_x, data_point_y), (data_point_x_test, data_point_y_test) = mnist.load_data()
-    size_of_data_point = 5000  #
+    size_of_data_point = len(data_point_x)
 
     dissimilarities_clean = calculate_euclidean_distance(
         data_point_x[:size_of_data_point])
