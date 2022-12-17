@@ -31,7 +31,7 @@ def analyse_Similarity(dissimilarities, data_point_y, dissimilarities_test,
                                                           dissimilarities_test)),
         "isomap_2": ("isomap", calculate_isomap(2, 1, dissimilarities, dissimilarities_test)),
         "k_medoids": ("k_medoids", calculate_k_medoids(dissimilarities, dissimilarities_test, initial_medoids)),
-        "binary_partition": ("binary_partition", calculate_binary_partition(2, dissimilarities, dissimilarities_test))
+        "binary_partition": ("binary_partition", calculate_binary_partition(len(initial_medoids), dissimilarities, dissimilarities_test))
     }
     dict_method = {"PCoA": None, "neighbour": [2], "isomap": None, "k_medoids": [real_value_name],
                    "binary_partition": [real_value_name]}

@@ -1,9 +1,7 @@
 from typing import List
-from sklearn.metrics.cluster import v_measure_score
-import pandas as pd
 
-from src.algos.EuclideanDistance import calculate_euclidean_distance
-from src.algos.KNeighbour import evaluate_k_neighbour
+import pandas as pd
+from sklearn.metrics.cluster import v_measure_score
 
 
 def compare_values_is_in(values, real_values, values_list, args):

@@ -19,20 +19,24 @@ def read_data_and_save(size_of_data_point):
     adult_transform_data, function_map = transformeAdultDataSet()
 
     # chose the total size of all the data
+    if size_of_data_point == 0:
+        data_point = adult_transform_data
+    else:
+        data_point: pd.DataFrame = adult_transform_data.iloc[:size_of_data_point]
 
-    data_point: pd.DataFrame = adult_transform_data.iloc[:size_of_data_point]
     data_point_x: pd.DataFrame = data_point.drop("label", axis=1)
 
     similarities, dissimilarities = calculate_similarities_equalities_matrice(data_point_x, function_map)
 
     # saving data so it can be use later
+    cwd = Path(os.getcwd())
+    dissimilarities_files = cwd.joinpath("save", 'dissimilarities_all.csv')
     file_name = "similarities.csv"
     with open(file_name, 'w', newline="") as my_open_file:
         csv_writer = csv.writer(my_open_file)
         csv_writer.writerows(similarities)
 
-    file_name = "dissimilarities.csv"
-    with open(file_name, 'w', newline="") as my_open_file:
+    with open(dissimilarities_files, 'w', newline="") as my_open_file:
         csv_writer = csv.writer(my_open_file)
         csv_writer.writerows(dissimilarities)
 
@@ -71,9 +75,9 @@ def add_y_and_prepare_data(dissimilarities_clean, test_size):
 if __name__ == '__main__':
     cwd = Path(os.getcwd())
 
-    dissimilarities_files = cwd.joinpath("save", 'dissimilarities_5000.csv')
+    dissimilarities_files = cwd.joinpath("save", 'dissimilarities_all.csv')
     # similarities_files = cwd.joinpath("save", 'similarities_5000.csv')
-    size_of_data_point = 5000
+    size_of_data_point = 0
     if not dissimilarities_files.exists():
         read_data_and_save(size_of_data_point)
 
