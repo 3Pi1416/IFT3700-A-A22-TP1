@@ -1,0 +1,80 @@
+neighbour_2 analyse :
+v-mesure:0.1390992255763222
+Total errors: 5097 on 26049
+>50K: 1171 on 3515
+<=50K: 3926 on 22534
+neighbour_3 analyse :
+v-mesure:0.17964393153937558
+Total errors: 4982 on 26049
+>50K: 2320 on 5928
+<=50K: 2662 on 20121
+neighbour_4 analyse :
+v-mesure:0.16373844776709712
+Total errors: 4887 on 26049
+>50K: 1407 on 4197
+<=50K: 3480 on 21852
+neighbour_5 analyse :
+v-mesure:0.19023010032331877
+Total errors: 4808 on 26049
+>50K: 2118 on 5698
+<=50K: 2690 on 20351
+neighbour_6 analyse :
+v-mesure:0.1795903030636405
+Total errors: 4740 on 26049
+>50K: 1459 on 4448
+<=50K: 3281 on 21601
+neighbour_7 analyse :
+v-mesure:0.1986536564478306
+Total errors: 4690 on 26049
+>50K: 2002 on 5584
+<=50K: 2688 on 20465
+k_medoids analyse :
+v-mesure:0.12399372333533253
+Total errors: 18322 on 26049
+>50K: 13529 on 15006
+<=50K: 4793 on 11043
+binary_partition analyse :
+v-mesure:0.0015799330795783074
+Total errors: 19649 on 26049
+>50K: 19498 on 25617
+<=50K: 151 on 432
+PCoA_neighbour_2 analyse :
+v-mesure:0.027391526651891228
+Total errors: 5192 on 20840
+>50K: 1025 on 1909
+<=50K: 4167 on 18931
+PCoA_neighbour_3 analyse :
+v-mesure:0.027391526651891228
+Total errors: 5192 on 20840
+>50K: 1025 on 1909
+<=50K: 4167 on 18931
+PCoA_neighbour_4 analyse :
+v-mesure:0.027391526651891228
+Total errors: 5192 on 20840
+>50K: 1025 on 1909
+<=50K: 4167 on 18931
+PCoA_neighbour_5 analyse :
+v-mesure:0.027391526651891228
+Total errors: 5192 on 20840
+>50K: 1025 on 1909
+<=50K: 4167 on 18931
+isomap_neighbour_2 analyse :
+v-mesure:0.02665750692345086
+Total errors: 5210 on 20840
+>50K: 1045 on 1931
+<=50K: 4165 on 18909
+isomap_neighbour_3 analyse :
+v-mesure:0.02665750692345086
+Total errors: 5210 on 20840
+>50K: 1045 on 1931
+<=50K: 4165 on 18909
+isomap_neighbour_4 analyse :
+v-mesure:0.02665750692345086
+Total errors: 5210 on 20840
+>50K: 1045 on 1931
+<=50K: 4165 on 18909
+isomap_neighbour_5 analyse :
+v-mesure:0.02665750692345086
+Total errors: 5210 on 20840
+>50K: 1045 on 1931
+<=50K: 4165 on 18909

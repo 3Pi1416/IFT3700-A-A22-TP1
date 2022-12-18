@@ -41,12 +41,14 @@ def read_data_and_save(size_of_data_point):
         csv_writer.writerows(dissimilarities)
 
 
-def add_y_and_prepare_data(dissimilarities_clean, test_size):
+def add_y_and_prepare_data(dissimilarities_clean, test_size, size_of_data_point):
     # find the data form before, to find y
     adult_transform_data, function_map = transformeAdultDataSet()
     data_point: pd.DataFrame = adult_transform_data.iloc[:size_of_data_point]
-    data_point_y_clean: pd.DataFrame = data_point["label"]
+    if size_of_data_point == 0:
+        data_point = adult_transform_data
 
+    data_point_y_clean: pd.DataFrame = data_point["label"]
     # shuffle a false, pour avoir la matrice diagonal 0 lorsqu'on apprend les modèles.
     dissimilarities, dissimilarities_test, data_point_y, data_point_y_test = train_test_split(dissimilarities_clean,
                                                                                               data_point_y_clean,
@@ -90,7 +92,7 @@ if __name__ == '__main__':
             dissimilarities_clean.append([float(i) for i in row])
 
     dissimilarities_square, dissimilarities_test_size_of_fit, data_point_y, data_point_y_test = add_y_and_prepare_data(
-        dissimilarities_clean, 0.8)
+        dissimilarities_clean, 0.8, size_of_data_point)
 
     colors = ["indigo" if point == ">50K" else "chartreuse" for point in data_point_y_test]
     initial_medoids = [0, 1]
