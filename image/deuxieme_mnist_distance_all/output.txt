@@ -90,18 +90,18 @@ Total errors: 43259 on 48000
 8: 37445 on 42028
 9: 0 on 0
 binary_partition analyse :
-v-mesure:0.0007690126933526567
-Total errors: 43302 on 48000
-0: 43282 on 47980
-1: 20 on 20
+v-mesure:0.041866598132672066
+Total errors: 43765 on 48000
+0: 42252 on 45956
+1: 7 on 7
 2: 0 on 0
 3: 0 on 0
-4: 0 on 0
-5: 0 on 0
-6: 0 on 0
-7: 0 on 0
-8: 0 on 0
-9: 0 on 0
+4: 4 on 6
+5: 11 on 11
+6: 1272 on 1770
+7: 18 on 18
+8: 195 on 225
+9: 6 on 7
 PCoA_neighbour_2 analyse :
 v-mesure:0.09493719256866162
 Total errors: 29682 on 38400
